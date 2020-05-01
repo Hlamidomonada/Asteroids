@@ -15,7 +15,7 @@
 
 	virtual void entity::update() {};
 
-	void entity::draw(RenderWindow& app)
+	void entity::draw(std::unique_ptr<RenderWindow> app)
 	{
 		anim.sprite.setPosition(x, y);
 		anim.sprite.setRotation(angle + 90);
