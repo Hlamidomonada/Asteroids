@@ -19,7 +19,7 @@ public:
 
   virtual void update();
 
-	void draw(RenderWindow& app);
+	void draw(std::unique_ptr<RenderWindow> app);
 
 	virtual ~Entity();
 };
