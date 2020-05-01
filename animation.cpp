@@ -2,7 +2,7 @@
 
 	animation::Animation() {}
 
-	animation::Animation(Texture& t, int x, int y, int w, int h, int count, float Speed)
+	animation::Animation(std::unique_ptr<Texture> t, int x, int y, int w, int h, int count, float Speed)
 	{
 		Frame = 0;
 		speed = Speed;
