@@ -5,7 +5,7 @@
 		life = 1;
 	}
 
-	void entity::settings(std::unique_ptr<Animation> a, int X, int Y, float Angle = 0, int radius = 1)
+	void entity::settings(Animation& a, int X, int Y, float Angle = 0, int radius = 1)
 	{
 		anim = a;
 		x = X; y = Y;
@@ -15,7 +15,7 @@
 
 	virtual void entity::update() {};
 
-	void entity::draw(std::unique_ptr<RenderWindow> app)
+	void entity::draw(RenderWindow& app)
 	{
 		anim.sprite.setPosition(x, y);
 		anim.sprite.setRotation(angle + 90);
