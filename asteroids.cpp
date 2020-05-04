@@ -1,13 +1,13 @@
 #include "asteroids.hpp"
-	asteroid::asteroid()
+	asteroid::asteroid() // можно вызывать к-р базового класса и передавать данные ему
     
 	{
-		dx = rand() % 8 - 4;
+		dx = rand() % 8 - 4; // оде генераторы C++11?
 		dy = rand() % 8 - 4;
-		name = "asteroid";
+		name = "asteroid"; // не стоит использовать строку, лучше константу перечисления
 	}
 
-	void asteroid::update()
+	void asteroid::update() // override?
 	{
 		x += dx;
 		y += dy;
