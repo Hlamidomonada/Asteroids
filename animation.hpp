@@ -12,7 +12,7 @@ public:
 
 	Animation();
   
-	Animation(std::unique_ptr<Texture> t, int x, int y, int w, int h, int count, float Speed);
+	Animation(Texture& t, int x, int y, int w, int h, int count, float Speed);
 
   void update();
 
