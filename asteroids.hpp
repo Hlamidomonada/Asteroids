@@ -4,7 +4,7 @@
 #include "entity.cpp"
 #include "const.hpp"
 
-class asteroid : public Entity
+class asteroid : public Entity // класс с Бб!
 {
 public:
 	asteroid();
