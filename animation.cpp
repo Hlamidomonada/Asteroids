@@ -1,9 +1,10 @@
 #include "animation.hpp"
 
-	animation::Animation() {}
+	animation::Animation() {} // см .hpp, также почему имя класса с маленькой буквы?
+// этот код даже не скомпилируется
 
 	animation::Animation(Texture& t, int x, int y, int w, int h, int count, float Speed)
-	{
+	{ // где списки инициализации?
 		Frame = 0;
 		speed = Speed;
 
@@ -19,8 +20,8 @@
 	void animation::update()
 	{
 		Frame += speed;
-		int n = frames.size();
-		if (Frame >= n) Frame -= n;
+		int n = frames.size(); // auto n = ...
+		if (Frame >= n) Frame -= n; // форматирование, обычно делают перенос строки
 		if (n > 0) sprite.setTextureRect(frames[int(Frame)]);
 	}
 
